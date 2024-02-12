@@ -3,9 +3,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
-import { CgGitFork } from "react-icons/cg";
 import {
-  AiFillStar,
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
   AiOutlineTool,
@@ -17,7 +15,7 @@ import { Link } from 'react-scroll';
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
-  const [navColour, updateNavbar] = useState(true);
+  const [navColour] = useState(true);
 
   return (
     <Navbar
@@ -101,15 +99,15 @@ function NavBar() {
                 smooth={true} 
                 duration={500}
               >
-                <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
+                <CgFileDocument style={{ marginBottom: "2px" }} /> CV
               </Nav.Link>
             </Nav.Item>
 
-            <Nav.Item className="fork-btn">
+            <Nav.Item className="button">
               <Button
-                href="https://github.com/soumyajit4419/Portfolio"
+                href="https://www.linkedin.com/in/paola-persico-963197131/"
                 target="_blank"
-                className="fork-btn-inner"
+                className="btn-inner"
               >
                 Contacts
               </Button>
