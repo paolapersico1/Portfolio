@@ -1,54 +1,82 @@
-import React from "react";
-import Particles from "react-tsparticles";
+import { useMemo } from "react";
+import Particles from "@tsparticles/react";
 
 function Particle() {
-  return (
-    <Particles
-      id="tsparticles"
-      params={{
-        particles: {
-          number: {
-            value: 200,
-            density: {
-              enable: true,
-              value_area: 1500,
-            },
-          },
-          line_linked: {
+
+  const particlesLoaded = (container) => {
+    console.log(container);
+  };
+  
+  const options = useMemo(
+    () => ({
+      background: {
+      },
+      fpsLimit: 120,
+      interactivity: {
+        events: {
+          onClick: {
             enable: true,
-            opacity: 0.1,
+            mode: "push",
+          }
+        },
+        modes: {
+          push: {
+            quantity: 4,
           },
-          move: {
-            direction: "right",
-            speed: 0.05,
-          },
-          size: {
-            value: 1,
-          },
-          opacity: {
-            anim: {
-              enable: true,
-              speed: 1,
-              opacity_min: 0.05,
-            },
+          repulse: {
+            distance: 200,
+            duration: 0.4,
           },
         },
-        interactivity: {
-          events: {
-            onclick: {
-              enable: true,
-              mode: "push",
-            },
-          },
-          modes: {
-            push: {
-              particles_nb: 1,
-            },
-          },
+      },
+      particles: {
+        color: {
+          value: "#ffffff",
         },
-        retina_detect: true,
-      }}
-    />
+        links: {
+          color: "#ffffff",
+          distance: 150,
+          enable: true,
+          opacity: 0.1,
+          width: 0.5,
+        },
+        move: {
+          direction: "none",
+          enable: true,
+          outModes: {
+            default: "bounce",
+          },
+          random: false,
+          speed: 0.1,
+          straight: false,
+        },
+        number: {
+          density: {
+            enable: true,
+          },
+          value: 150,
+        },
+        opacity: {
+          value: 0.5,
+        },
+        shape: {
+          type: "circle",
+        },
+        size: {
+          value: { min: 1, max: 2 },
+        },
+      },
+      detectRetina: true,
+    }),
+    [],
+  );
+
+  return (
+      <Particles
+        id="tsparticles"
+        particlesLoaded={particlesLoaded}
+        options={options}
+      />
   );
 }
 
