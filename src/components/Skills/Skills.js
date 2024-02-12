@@ -1,8 +1,9 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import Particle from "../Particle";
 import Techstack from "./Techstack";
 import Toolstack from "./Toolstack";
+import Languagestack from "./Languagestack";
 
 function Skills() {
   return (
@@ -10,13 +11,17 @@ function Skills() {
       <Particle />
       <Container>
         <h1 className="project-heading">
-          <strong className="purple">Languages</strong>
+          <strong className="orange">Languages</strong>
         </h1>
+        <Languagestack />
 
+        <h1 className="project-heading">
+          <strong className="orange">Frameworks</strong> and <strong className="orange">Platforms</strong>
+        </h1>
         <Techstack />
 
         <h1 className="project-heading">
-          <strong className="purple">Tools</strong>
+          <strong className="orange">Tools</strong>
         </h1>
         <Toolstack />
       </Container>
