@@ -21,7 +21,7 @@ import messagesEn from "./translations/en.json";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
-  const [locale, setLocale] = useState('it');
+  const [locale, setLocale] = useState('en');
 
   const handleLanguageChange = (selectedLocale) => {
     setLocale(selectedLocale);
