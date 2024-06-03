@@ -72,6 +72,10 @@ button:focus {
   border-radius: 12px;
 }
 
+.scroll-to-top {
+  background-color: #f69d30 !important;
+}
+
 /* --------- */
 /* Navbar Section  */
 /* --------- */
@@ -97,8 +101,7 @@ button:focus {
 
 .navbar-toggler span {
   display: block !important;
-  background-color: #f69d30 !important;
-  height: 4px !important;
+  height: 27px !important;
   width: 27px !important;
   margin-top: 5px !important;
   margin-bottom: 5px !important;
@@ -119,24 +122,17 @@ button:focus {
 }
 
 .navbar-toggler:not(.collapsed) span:nth-child(1) {
-  position: absolute !important;
-  left: 12px !important;
-  top: 10px !important;
-  transform: rotate(135deg) !important;
+  transform: rotate(90deg) !important;
   opacity: 0.9 !important;
 }
 
 .navbar-toggler:not(.collapsed) span:nth-child(2) {
-  height: 12px !important;
   visibility: hidden !important;
   background-color: transparent !important;
 }
 
 .navbar-toggler:not(.collapsed) span:nth-child(3) {
-  position: absolute !important;
-  left: 12px !important;
-  top: 10px !important;
-  transform: rotate(-135deg) !important;
+  transform: rotate(-90deg) !important;
   opacity: 0.9 !important;
 }
 
@@ -255,6 +251,17 @@ button:focus {
   padding-top: 80px !important;
 }
 
+.home-pic-div {
+  paddingBottom: 20;
+  z-index: 1;
+}
+
+.home-pic {
+  width: 70%;
+  margin: auto;
+  display: block;
+}
+
 .home-section {
   position: relative;
   z-index: -1;
@@ -273,6 +280,7 @@ button:focus {
 .heading {
   font-size: 2.4em !important;
   padding-left: 50px !important;
+  paddingBottom: 10;
 }
 
 .heading-name {
@@ -752,3 +760,51 @@ button:focus {
 .btn-inner::after {
   display: none !important;
 }
+
+img::selection {
+  background-color: transparent;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  color: white; 
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-menu .dropdown-item {
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-menu .dropdown-item img {
+  width: 24px; /* Set the desired width */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 8px; /* Space between image and text */
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-toggle img {
+  width: 24px; /* Set the desired width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+ 

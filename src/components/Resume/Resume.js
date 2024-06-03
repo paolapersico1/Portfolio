@@ -7,6 +7,7 @@ import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import "react-pdf/dist/esm/Page/TextLayer.css";
+import { FormattedMessage } from 'react-intl';
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 function Resume() {
@@ -29,7 +30,7 @@ function Resume() {
             style={{ maxWidth: "250px" }}
           >
             <AiOutlineDownload />
-            &nbsp;Download CV
+            &nbsp;<FormattedMessage id="downloadcv" defaultMessage="Download CV" />
           </Button>
         </Row>
 
@@ -48,7 +49,7 @@ function Resume() {
             style={{ maxWidth: "250px" }}
           >
             <AiOutlineDownload />
-            &nbsp;Download CV
+            &nbsp;<FormattedMessage id="downloadcv" defaultMessage="Download CV" />
           </Button>
         </Row>
       </Container>

@@ -11,33 +11,41 @@ import {
 } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
+import myLogo from "../Assets/logo.svg";
+import LanguageSwitcher from "../components/LanguageSwitcher.js";
 import { Link } from 'react-scroll';
+import { FormattedMessage } from 'react-intl';
 
-function NavBar() {
+function NavBar({ currentLocale, onChangeLocale }) {
   const [expand, updateExpanded] = useState(false);
   const [navColour] = useState(true);
 
   return (
     <Navbar
+      variant="dark"
       expanded={expand}
       fixed="top"
       expand="md"
       className={navColour ? "sticky" : "navbar"}
     >
       <Container>
-      <Navbar.Brand href="/" className="d-flex">
+         <Navbar.Brand href="/">
+          <img
+            src={myLogo}
+            alt="logo"
+            style={{ maxHeight: "40px", paddingRight: "10px" }}
+          />
           Paola Persico
         </Navbar.Brand>
+
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
           onClick={() => {
             updateExpanded(expand ? false : "expanded");
           }}
         >
-          <span></span>
-          <span></span>
-          <span></span>
         </Navbar.Toggle>
+
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto" defaultActiveKey="#home">
             <Nav.Item>
@@ -60,7 +68,7 @@ function NavBar() {
                 smooth={true} 
                 duration={500}
               >
-                <AiOutlineUser style={{ marginBottom: "2px" }} /> About
+                <AiOutlineUser style={{ marginBottom: "2px" }} /> <FormattedMessage id="about" defaultMessage="About" />
               </Nav.Link>
             </Nav.Item>
 
@@ -72,7 +80,7 @@ function NavBar() {
                 smooth={true} 
                 duration={500}
               >
-                <AiOutlineTool style={{ marginBottom: "2px" }} /> Skills
+                <AiOutlineTool style={{ marginBottom: "2px" }} /> <FormattedMessage id="skills" defaultMessage="Skills" />
               </Nav.Link>
             </Nav.Item>
 
@@ -84,10 +92,7 @@ function NavBar() {
                 smooth={true} 
                 duration={500}
               >
-                <AiOutlineFundProjectionScreen
-                  style={{ marginBottom: "2px" }}
-                />{" "}
-                Projects
+                <AiOutlineFundProjectionScreen style={{ marginBottom: "2px" }}/>{" "}<FormattedMessage id="projects" defaultMessage="Projects" />
               </Nav.Link>
             </Nav.Item>
 
@@ -105,12 +110,16 @@ function NavBar() {
 
             <Nav.Item className="button">
               <Button
-                href="https://www.linkedin.com/in/paola-persico-963197131/"
+                href="https://www.linkedin.com/in/paolapersico1/"
                 target="_blank"
                 className="btn-inner"
               >
-                Contacts
+                <FormattedMessage id="contacts" defaultMessage="Contacts" />
               </Button>
+            </Nav.Item>
+
+            <Nav.Item className="button">
+              <LanguageSwitcher currentLocale={currentLocale} onChange={onChangeLocale} />
             </Nav.Item>
           </Nav>
         </Navbar.Collapse>

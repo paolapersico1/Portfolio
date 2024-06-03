@@ -4,6 +4,7 @@ import Particle from "../Particle";
 import Techstack from "./Techstack";
 import Toolstack from "./Toolstack";
 import Languagestack from "./Languagestack";
+import { FormattedMessage } from 'react-intl';
 
 function Skills() {
   return (
@@ -11,17 +12,17 @@ function Skills() {
       <Particle />
       <Container>
         <h1 className="project-heading">
-          <strong className="orange">Languages</strong>
+          <strong className="orange"><FormattedMessage id="languages" defaultMessage="Languages" /></strong>
         </h1>
         <Languagestack />
 
         <h1 className="project-heading">
-          <strong className="orange">Frameworks</strong> and <strong className="orange">Platforms</strong>
+          <strong className="orange"><FormattedMessage id="frameworks" defaultMessage="Frameworks" /></strong> and <strong className="orange"><FormattedMessage id="platforms" defaultMessage="Platforms" /></strong>
         </h1>
         <Techstack />
 
         <h1 className="project-heading">
-          <strong className="orange">Tools</strong>
+          <strong className="orange"><FormattedMessage id="tools" defaultMessage="Tools" /></strong>
         </h1>
         <Toolstack />
       </Container>

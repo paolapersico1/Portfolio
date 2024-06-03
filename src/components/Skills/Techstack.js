@@ -13,19 +13,19 @@ function Techstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>  
       <Col xs={4} md={2} className="tech-icons">
-        <img src={images['sklearn.svg']} className="tech-image"  alt="Scikit-learn"/>
+        <img src={images['sklearn.svg']} className="tech-image" title="Scikit-learn" alt="Scikit-learn"/>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <img src={images['nodejs.svg'] } className="tech-image"  alt="NodeJS"/>
+        <img src={images['nodejs.svg'] } className="tech-image" title="NodeJS" alt="NodeJS"/>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <img src={images['unity.png']} className="tech-image"  alt="Unity"/>
+        <img src={images['unity.png']} className="tech-image" title="Unity" alt="Unity"/>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <img src={images['codeigniter.svg']} className="tech-image" alt="CodeIgniter"/>
+        <img src={images['codeigniter.svg']} className="tech-image" title="CodeIgniter" alt="CodeIgniter"/>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <img src={images['bootstrap.svg']} className="tech-image" alt="Bootstrap"/>
+        <img src={images['bootstrap.svg']} className="tech-image" title="Bootstrap" alt="Bootstrap"/>
       </Col>
     </Row>
   );

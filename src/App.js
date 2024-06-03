@@ -12,12 +12,23 @@ import Resume from "./components/Resume/Resume";
 import {
   BrowserRouter as Router,
 } from "react-router-dom";
-import ScrollToTop from "./components/ScrollToTop";
+import ScrollToTop from "react-scroll-to-top";
 import "./style.css";
 import "./App.css";
+import { IntlProvider } from 'react-intl';
+import messagesIt from "./translations/it.json";
+import messagesEn from "./translations/en.json";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
+  const [locale, setLocale] = useState('it');
+
+  const handleLanguageChange = (selectedLocale) => {
+    setLocale(selectedLocale);
+  };
+
+  const messages = (locale == 'en')? messagesEn : messagesIt; 
+
   const [load, updateLoad] = useState(true);
 
   useEffect(() => {
@@ -31,19 +42,21 @@ function App() {
   }, []);
 
   return (
-    <Router>
-      <Preloader load={load} />
-      <div className="App" id={load ? "no-scroll" : "scroll"}>
-        <Navbar />
-        <ScrollToTop />
-        <Home />
-        <About />
-        <Skills />
-        <Projects />
-        <Resume />
-        <Footer />
-      </div>
-    </Router>
+    <IntlProvider locale={locale} messages={messages}>
+      <Router>
+        <Preloader load={load} />
+        <div className="App" id={load ? "no-scroll" : "scroll"}>
+          <Navbar currentLocale={locale} onChangeLocale={setLocale}/>
+          <ScrollToTop smooth color="white"/>
+          <Home />
+          <About />
+          <Skills />
+          <Projects />
+          <Resume />
+          <Footer />
+        </div>
+      </Router>
+    </IntlProvider>
   );
 }
 

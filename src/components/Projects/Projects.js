@@ -4,7 +4,7 @@ import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 import tmd from "../../Assets/Projects/tmd.png";
 import bolofence from "../../Assets/Projects/bolofence.png";
-import cloudchain from "../../Assets/Projects/bolofence.png";
+import cloudchain from "../../Assets/Projects/cloudchain.png";
 import converso from "../../Assets/Projects/converso.png";
 import embodiment from "../../Assets/Projects/embodiment.JPG";
 import unipoly from "../../Assets/Projects/unipoly.jpg";
@@ -13,26 +13,28 @@ import bolofencePdf from "../../Assets/../Assets/Projects/bolofence.pdf";
 import cloudchainPdf from "../../Assets/../Assets/Projects/cloudchain.pdf";
 import embodimentvrPdf from "../../Assets/../Assets/Projects/embodimentvr.pdf";
 import tmdPdf from "../../Assets/../Assets/Projects/tmd.pdf";
+import { FormattedMessage, useIntl } from 'react-intl'; 
 
 function Projects() {
+  const intl = useIntl();
   return (
     <Container fluid className="project-section">
       <Particle />
       <Container>
         <h1 className="project-heading">
-          My <strong className="orange">Projects</strong>
+          My <strong className="orange"><FormattedMessage id="projects" defaultMessage="Projects" /></strong>
         </h1>
         <p style={{ color: "white" }}>
-          Here are a few projects I've worked on recently.
+          <FormattedMessage id="projectdesc" defaultMessage="Here are a few projects I've worked on." />
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={converso}
-              tags={['home assistant', 'python', 'scikit-learn', 'nltk']}
+              tags={['python', 'scikit-learn', 'nltk']}
               isBlog={false}
               title="Converso"
-              description="A privacy-preserving AI-based Intent Recognition engine with Probabilistic Spell-Editing for an Italian Smart Home Voice Assistant."
+              description={intl.formatMessage({ id: 'conversodesc' })}
               ghLink="https://github.com/paolapersico1/converso"
               demoLink={conversoPdf}
             />
@@ -41,10 +43,10 @@ function Projects() {
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={bolofence}
-              tags={['android', 'java', 'codeigniter', 'postgis']}
+              tags={['java', 'codeigniter', 'postgis']}
               isBlog={false}
               title="BoloFence"
-              description="An Activity-aware geofencing platform which tracks a user location through an Android app, sends related notifications and analyses spatial data."
+              description={intl.formatMessage({ id: 'bolofencedesc' })}
               ghLink="https://github.com/paolapersico1/BoloFence"
               demoLink={bolofencePdf}
             />
@@ -53,10 +55,10 @@ function Projects() {
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={cloudchain}
-              tags={['expressjs', 'solidity', 'truffle','web3']}
+              tags={['expressjs', 'solidity', 'truffle']}
               isBlog={false}
               title="CloudChain"
-              description="A blockchain-based cloud storage platform which can provide an automatic settlement tool for SLA-related disputes."
+              description={intl.formatMessage({ id: 'cloudchaindesc' })}
               ghLink="https://github.com/paolapersico1/cloud-chain"
               demoLink={cloudchainPdf}             
             />
@@ -65,10 +67,10 @@ function Projects() {
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={tmd}
-              tags={['python', 'pandas', 'scikit-learn', 'pytorch']}
+              tags={['python', 'scikit-learn', 'pytorch']}
               isBlog={false}
               title="Transport-Mode-Detection"
-              description="A Data Analysis project which compares the performance of several ML models in the task of detecting a user's transport mode via their mobile sensors data."
+              description={intl.formatMessage({ id: 'tmddesc' })}
               ghLink="https://github.com/paolapersico1/Transport-Mode-Detection"
               demoLink={tmdPdf}
             />
@@ -80,7 +82,7 @@ function Projects() {
               tags={['C#', 'unity', 'openXR']}
               isBlog={false}
               title="Embodiment&BodySwap VR"
-              description="A project developed in collaboration with artist Federica Sasso which explores embodiment and body swap experiences through VR headsets to enhance empathy."
+              description={intl.formatMessage({ id: 'embodimentdesc' })}
               ghLink="https://github.com/stars/paolapersico1/lists/embodiment-bodyswap"
               demoLink={embodimentvrPdf}
             />
@@ -92,7 +94,7 @@ function Projects() {
               tags={['C#', 'UML', '.NET']}
               isBlog={false}
               title="Unipoly"
-              description="A turn based videogame inspired by Monopoly whose winner is the first player who achieves a Computer Science degree."
+              description={intl.formatMessage({ id: 'unipolydesc' })}
               ghLink="https://github.com/paolapersico1/Unipoly"
             />
           </Col>
