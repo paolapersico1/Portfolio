@@ -16,7 +16,7 @@ function Footer() {
         <Col md="4" className="footer-body">
           <h3><FormattedMessage id="findmeon" defaultMessage="Find me on:" /></h3>
             <div className="hero-socials">
-              <li className="social-icons">
+              <div className="social-icons">
                   <a
                     href="https://github.com/paolapersico1"
                     style={{ color: "white" }}
@@ -25,8 +25,8 @@ function Footer() {
                   >
                     <AiFillGithub />
                   </a>
-                </li>
-                <li className="social-icons">
+                </div>
+                <div className="social-icons">
                   <a
                     href="https://www.linkedin.com/in/paola-persico-963197131/"
                     style={{ color: "white" }}
@@ -35,8 +35,8 @@ function Footer() {
                   >
                     <FaLinkedinIn />
                   </a>
-                </li>
-                <li className="social-icons">
+                </div>
+                <div className="social-icons">
                   <a
                     href="https://community.home-assistant.io/u/emilypeek/summary/"
                     style={{ color: "white" }}
@@ -45,7 +45,7 @@ function Footer() {
                   >
                     <AiOutlineHome />
                   </a>
-                </li>
+                </div>
             </div>
         </Col>
         <Col md="4" className="footer-copywright">
