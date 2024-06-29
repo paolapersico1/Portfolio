@@ -33,7 +33,7 @@ function NavBar({ currentLocale, onChangeLocale }) {
           <img
             src={myLogo}
             alt="logo"
-            style={{ maxHeight: "40px", paddingRight: "10px" }}
+            style={{ maxHeight: "25px", paddingRight: "10px" }}
           />
           Paola Persico
         </Navbar.Brand>
