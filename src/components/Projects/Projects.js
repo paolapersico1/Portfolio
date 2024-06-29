@@ -1,7 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
-import Particle from "../Particle";
 import tmd from "../../Assets/Projects/tmd.webp";
 import bolofence from "../../Assets/Projects/bolofence.webp";
 import cloudchain from "../../Assets/Projects/cloudchain.webp";
@@ -19,7 +18,6 @@ function Projects() {
   const intl = useIntl();
   return (
     <Container fluid className="project-section">
-      <Particle />
       <Container>
         <h1 className="project-heading">
           My <strong className="orange"><FormattedMessage id="projects" defaultMessage="Projects" /></strong>

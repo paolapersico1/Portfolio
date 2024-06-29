@@ -35,9 +35,7 @@ function App() {
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
     }).then(() => {
-      setTimeout(() => {
-        updateLoad(false);
-      }, 1200);
+      updateLoad(false);
     });
   }, []);
 

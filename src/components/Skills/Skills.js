@@ -1,6 +1,5 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import Particle from "../Particle";
 import Techstack from "./Techstack";
 import Toolstack from "./Toolstack";
 import Languagestack from "./Languagestack";
@@ -9,7 +8,6 @@ import { FormattedMessage } from 'react-intl';
 function Skills() {
   return (
     <Container fluid className="skills-section" id="skills-section">
-      <Particle />
       <Container>
         <h1 className="project-heading">
           <strong className="orange"><FormattedMessage id="languages" defaultMessage="Languages" /></strong>
