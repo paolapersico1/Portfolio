@@ -31,6 +31,7 @@ function Resume() {
             variant="primary"
             href={pdfs[locale]}
             target="_blank"
+            rel="noopener noreferrer"
             className="btn-inner" 
             style={{ maxWidth: "250px" }}
           >
@@ -50,6 +51,7 @@ function Resume() {
             variant="primary"
             href={pdfs[locale]}
             target="_blank"
+            rel="noopener noreferrer"
             className="btn-inner"
             style={{ maxWidth: "250px" }}
           >

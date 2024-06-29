@@ -1,8 +1,8 @@
 // LanguageSwitcher.js
 import React from 'react';
 import { useIntl } from 'react-intl';
-import itFlag from '../Assets/italian-flag.png';
-import enFlag from '../Assets/english-flag.png';
+import itFlag from '../Assets/italian-flag.webp';
+import enFlag from '../Assets/english-flag.webp';
 
 const LanguageSwitcher = ({ currentLocale, onChange }) => {
   const intl = useIntl();

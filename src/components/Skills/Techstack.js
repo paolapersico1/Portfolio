@@ -7,7 +7,7 @@ function importAll(r) {
   return images;
 }
 
-const images = importAll(require.context('../../Assets/skills', false, /\.(png|jpe?g|svg)$/));
+const images = importAll(require.context('../../Assets/skills/tech', false, /\.(webp|png|jpe?g|svg)$/));
 
 function Techstack() {
   return (

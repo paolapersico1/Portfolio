@@ -112,6 +112,7 @@ function NavBar({ currentLocale, onChangeLocale }) {
               <Button
                 href="https://www.linkedin.com/in/paolapersico1/"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="btn-inner"
               >
                 <FormattedMessage id="contacts" defaultMessage="Contacts" />
