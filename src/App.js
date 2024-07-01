@@ -9,9 +9,8 @@ import Skills from "./components/Skills/Skills";
 import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer";
 import Resume from "./components/Resume/Resume";
-import {
-  BrowserRouter as Router,
-} from "react-router-dom";
+import PageNotFound from "./components/PageNotFound";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ScrollToTop from "react-scroll-to-top";
 import "./style.css";
 import "./App.css";
@@ -46,11 +45,15 @@ function App() {
         <div className="App" id={load ? "no-scroll" : "scroll"}>
           <Navbar currentLocale={locale} onChangeLocale={setLocale}/>
           <ScrollToTop smooth color="white"/>
-          <Home />
-          <About />
-          <Skills />
-          <Projects />
-          <Resume />
+          <Routes>
+            <Route exact path="/" element={<><Home /><About /><Skills /><Projects /><Resume /></>} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/about" element={<About />}  />
+            <Route path="/skills" element={<Skills />}  />
+            <Route path="/projects" element={<Projects />}  />
+            <Route path="/resume" element={<Resume />}  />
+            <Route path="*" element={<PageNotFound />} />
+          </Routes>
           <Footer />
         </div>
       </Router>
