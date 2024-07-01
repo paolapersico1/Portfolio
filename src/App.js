@@ -22,11 +22,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function App() {
   const [locale, setLocale] = useState('en');
 
-  const handleLanguageChange = (selectedLocale) => {
-    setLocale(selectedLocale);
-  };
-
-  const messages = (locale == 'en')? messagesEn : messagesIt; 
+  const messages = (locale === 'en')? messagesEn : messagesIt; 
 
   const [load, updateLoad] = useState(true);
 
@@ -43,16 +39,20 @@ function App() {
       <Router>
         <Preloader load={load} />
         <div className="App" id={load ? "no-scroll" : "scroll"}>
-          <Navbar currentLocale={locale} onChangeLocale={setLocale}/>
-          <ScrollToTop smooth color="white"/>
           <Routes>
-            <Route exact path="/" element={<><Home /><About /><Skills /><Projects /><Resume /></>} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/about" element={<About />}  />
-            <Route path="/skills" element={<Skills />}  />
-            <Route path="/projects" element={<Projects />}  />
-            <Route path="/resume" element={<Resume />}  />
-            <Route path="*" element={<PageNotFound />} />
+            <Route exact path="/" element={<>
+                                            <Navbar currentLocale={locale} onChangeLocale={setLocale} displayScrollLinks={true}/>
+                                            <ScrollToTop smooth color="white"/>
+                                            <Home />
+                                            <About />
+                                            <Skills />
+                                            <Projects />
+                                            <Resume />
+                                          </>} />
+            <Route path="*" element={<>
+                                      <Navbar currentLocale={locale} onChangeLocale={setLocale} displayScrollLinks={false}/>
+                                      <PageNotFound />
+                                      </>} />
           </Routes>
           <Footer />
         </div>
