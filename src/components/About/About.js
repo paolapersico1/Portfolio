@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import myImg from "../../Assets/avatar.webp";
+import myImg from "../../assets/avatar.webp";
 import Tilt from "react-parallax-tilt";
 import { FormattedMessage } from 'react-intl';
 

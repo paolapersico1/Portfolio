@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import notFoundImg from "../Assets/404.svg";
+import notFoundImg from "../assets/404.svg";
 import { FormattedMessage } from 'react-intl';
 
 function PageNotFound() {

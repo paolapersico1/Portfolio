@@ -7,7 +7,7 @@ function importAll(r) {
   return images;
 }
 
-const images = importAll(require.context('../../Assets/skills/tech', false, /\.(webp|png|jpe?g|svg)$/));
+const images = importAll(require.context('../../assets/skills/tech', false, /\.(webp|png|jpe?g|svg)$/));
 
 function Techstack() {
   return (
@@ -19,7 +19,7 @@ function Techstack() {
         <img src={images['nodejs.svg'] } className="tech-image" title="NodeJS" alt="NodeJS"/>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <img src={images['unity.png']} className="tech-image" title="Unity" alt="Unity"/>
+        <img src={images['unity.svg']} className="tech-image" title="Unity" alt="Unity"/>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <img src={images['codeigniter.svg']} className="tech-image" title="CodeIgniter" alt="CodeIgniter"/>

@@ -7,7 +7,7 @@ function importAll(r) {
   return images;
 }
 
-const images = importAll(require.context('../../Assets/skills/languages', false, /\.(webp|png|jpe?g|svg)$/));
+const images = importAll(require.context('../../assets/skills/languages', false, /\.(webp|png|jpe?g|svg)$/));
 
 function Languagestack() {
   return (

@@ -11,7 +11,7 @@ import {
 } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
-import myLogo from "../Assets/logo.svg";
+import myLogo from "../assets/logo.svg";
 import LanguageSwitcher from "../components/LanguageSwitcher.js";
 import { Link } from 'react-scroll';
 import { FormattedMessage } from 'react-intl';

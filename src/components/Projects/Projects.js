@@ -1,17 +1,17 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
-import tmd from "../../Assets/Projects/tmd.webp";
-import bolofence from "../../Assets/Projects/bolofence.webp";
-import cloudchain from "../../Assets/Projects/cloudchain.webp";
-import converso from "../../Assets/Projects/converso.webp";
-import embodiment from "../../Assets/Projects/embodiment.webp";
-import unipoly from "../../Assets/Projects/unipoly.webp";
-import conversoPdf from "../../Assets/../Assets/Projects/converso.pdf";
-import bolofencePdf from "../../Assets/../Assets/Projects/bolofence.pdf";
-import cloudchainPdf from "../../Assets/../Assets/Projects/cloudchain.pdf";
-import embodimentvrPdf from "../../Assets/../Assets/Projects/embodimentvr.pdf";
-import tmdPdf from "../../Assets/../Assets/Projects/tmd.pdf";
+import tmd from "../../assets/projects/tmd.webp";
+import bolofence from "../../assets/projects/bolofence.webp";
+import cloudchain from "../../assets/projects/cloudchain.webp";
+import converso from "../../assets/projects/converso.webp";
+import embodiment from "../../assets/projects/embodiment.webp";
+import unipoly from "../../assets/projects/unipoly.webp";
+import conversoPdf from "../../assets/../assets/projects/converso.pdf";
+import bolofencePdf from "../../assets/../assets/projects/bolofence.pdf";
+import cloudchainPdf from "../../assets/../assets/projects/cloudchain.pdf";
+import embodimentvrPdf from "../../assets/../assets/projects/embodimentvr.pdf";
+import tmdPdf from "../../assets/../assets/projects/tmd.pdf";
 import { FormattedMessage, useIntl } from 'react-intl'; 
 
 function Projects() {
@@ -20,10 +20,10 @@ function Projects() {
     <Container fluid className="project-section">
       <Container>
         <h1 className="project-heading">
-          My <strong className="orange"><FormattedMessage id="projects" defaultMessage="Projects" /></strong>
+          My <strong className="orange"><FormattedMessage id="projects/" defaultMessage="Projects" /></strong>
         </h1>
         <p style={{ color: "white" }}>
-          <FormattedMessage id="projectdesc" defaultMessage="Here are a few projects I've worked on." />
+          <FormattedMessage id="projectdesc" defaultMessage="Here are a few projects/ I've worked on." />
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">

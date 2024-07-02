@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import homepic from "../../Assets/home.webp";
+import homepic from "../../assets/home.webp";
 import Particle from "../Particle";
 import Type from "./Type";
 import { FormattedMessage } from 'react-intl';
